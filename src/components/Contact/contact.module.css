@@ -1,0 +1,27 @@
+@import "../../vars.css";
+
+.container {
+    color: var(--color-text);
+    margin-top: 120px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 58px 10%;
+    gap: 10px;
+}
+.links {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.footerName {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: #4d4d4e;
+    font-size: 25px;
+}

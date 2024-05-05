@@ -1,0 +1,23 @@
+[
+    {
+      "title": "Event Horizon",
+      "imageSrc": "/assets/projects/eventHorizon.png",
+      "description": "This is a project made to learn design patterns and java by building an app.",
+      "skills": ["Java", "Firebase", "Google Cloud", "GitHub"],
+      "source": "https://github.com/mangoinatree/EventHorizon"
+    },
+    {
+      "title": "Personal Portfolio",
+      "imageSrc": "/assets/projects/eventHorizon.png",
+      "description": "This is a project made to learn react by building a portfolio.",
+      "skills": ["React", "HTML", "CSS"],
+      "source": "https://github.com/mangoinatree/EventHorizon"
+    },
+    {
+      "title": "Tech Notes",
+      "imageSrc": "/assets/projects/techNotes.png",
+      "description": "This is a project made to learn the MERN stack by building an app.",
+      "skills": ["React", "HTML", "CSS", "NodeJS", "Express", "Mongo", "Redux", "JWT"],
+      "source": "https://github.com/mangoinatree/techNotes"
+    }
+]
