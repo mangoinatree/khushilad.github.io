@@ -5,13 +5,18 @@
   color: var(--color-text);
   margin-left: 10%;
   margin-right: 10%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
-  color: var(--color-text);
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 700;
-  letter-spacing: 1.75px;
+  text-decoration: none;
+  color: rgb(54, 35, 39);
+  margin-left: 10px;
+  margin-top: 15px;
 }
 
 

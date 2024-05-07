@@ -5,14 +5,20 @@
     margin-top: 79px;
     margin-left: 10%;
     margin-right: 10%;
+    display:flex;
+    flex-direction: column;
+    padding: 25px;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.3);
+    
 }
 
 .title {
-    color: var(--color-text);
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1.75px;
-    text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(54, 35, 39);
+  margin-left: 10px;
+  margin-top: 15px;
 }
 
 .content {
@@ -37,8 +43,8 @@
 }
 
 .skillImageContainer {
-  background: radial-gradient(circle, var(--color-secondary) 0%, transparent 100%);
-    opacity: 80%;
+    background: radial-gradient(circle, rgb(97, 62, 70) 0%, transparent 90%);
+    opacity: 100%;
     border-radius: 100%;
     display: flex;
     align-items: center;
@@ -46,86 +52,15 @@
     width: 110px;
     height: 110px;
 }
-.skillImageContainer:hover{
-  opacity: 100%;
-}
+
 
 .skill p {
     font-size: 25px;
     font-family: var(--font-roboto);
-    font-weight: 200;
+    font-weight: 400;
+    color: rgb(74, 48, 54);
   }
   
-  .history {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .historyItem {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 17px;
-    background: #19376d;
-    background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
-    border-radius: 10px;
-    padding: 24px;
-  }
-  
-  .historyItem img {
-    width: 50px;
-  }
-  
-  .historyItemDetails {
-    font-family: var(--font-roboto);
-  }
-  
-  .historyItemDetails h3 {
-    font-size: 30px;
-    font-weight: 500;
-  }
-  
-  .historyItemDetails p {
-    font-size: 20px;
-    font-weight: 300;
-  }
-  
-  .historyItemDetails ul {
-    margin-top: 6px;
-    list-style-position: inside;
-    font-size: 25px;
-    list-style-type: disc;
-    margin-left: 17px;
-  }
-  .topBlur {
-    position: absolute;
-    width: 50vw;
-    height: 50vw;
-    min-width: 350px;
-    min-width: 350px;
-    top: -254px;
-    left: -10vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
-  }
-  
-  .bottomBlur {
-    position: absolute;
-    width: 70vw;
-    height: 50vw;
-    min-width: 350px;
-    min-width: 250px;
-    top: 246px;
-    right: -25vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 109, 0.7);
-    filter: blur(100px);
-    z-index: 0;
-  }
   
   @media screen and (max-width: 830px) {
     .content {
@@ -133,15 +68,14 @@
       align-items: center;
       gap: 34px;
     }
+    .container {
+      align-items: center;
+    }
   
     .skills {
       width: 100%;
       flex-direction: row;
       justify-content: center;
     }
-  
-    .history {
-      width: 100%;
-      gap: 9px;
-    }
+ 
   }

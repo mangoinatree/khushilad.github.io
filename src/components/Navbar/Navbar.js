@@ -37,17 +37,17 @@ const Navbar = () => {
                     <ul className={styles.menuItems}>
                         <li>
                             <a target="_blank" rel="noreferrer" href='http://www.linkedin.com/in/khushilad'>
-                                <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" className={styles.anchorIcon}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faLinkedin} color="rgb(97, 62, 70)" className={styles.anchorIcon}></FontAwesomeIcon>
                             </a>
                         </li>
                         <li>
                             <a target="_blank" rel="noreferrer" href='https://github.com/mangoinatree?ocid=AIDcmmli8vlwie_SEM__k_EAIaIQobChMI0ZimvvHvhQMVoQWtBh1_HgRcEAAYASAAEgIwn_D_BwE_k_'>
-                                <FontAwesomeIcon icon={faGithub} color="#4d4d4e" className={styles.anchorIcon}></FontAwesomeIcon>
+                                <FontAwesomeIcon icon={faGithub} color="rgb(97, 62, 70)" className={styles.anchorIcon}></FontAwesomeIcon>
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" rel="noreferrer" href=''>
-                                <FontAwesomeIcon icon={faFile} color="#4d4d4e" className={styles.anchorIcon}></FontAwesomeIcon>
+                            <a target="_blank" rel="noreferrer" href='/assets/nav/resumeklad.docx' >
+                                <FontAwesomeIcon icon={faFile} color="rgb(97, 62, 70)" className={styles.anchorIcon}></FontAwesomeIcon>
                             </a>
                         </li>
                     </ul>

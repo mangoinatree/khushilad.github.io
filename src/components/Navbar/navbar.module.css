@@ -8,13 +8,15 @@
     padding-top: 61px;
     z-index: 2;
     margin: 0 10%;
+    padding-bottom: 10px;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.3);
 }
 
 .title {
     font-size: 30px;
     font-weight: 600;
     text-decoration: none;
-    color: var(--color-text)
+    color: rgb(97, 62, 70);
 }
 
 .menuBtn{
@@ -35,15 +37,15 @@
 
 .menuItems a {
     font-size: 25px;
-    color: var(--color-text);
+    color: rgb(97, 62, 70);
     text-decoration: none;
 }
 .menuItems li:hover a {
-    color: #fbed54; 
+    color: white; 
 }
 
 .menuItems li a .anchorIcon:hover {
-    color: #fbed54; 
+    color: white; 
   }
   
 
@@ -51,6 +53,11 @@
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .menuItems a {
+        font-size: 25px;
+        color: var(--color-text);
+        text-decoration: none;
     }
     
     .menu {
@@ -73,12 +80,12 @@
         gap: 13px;
         border-radius: 10px;
         background: rgb(10, 23, 74);
-        background: linear-gradient(0deg, rgba(25, 55, 109, 0.2) 0%,rgba(10, 23, 74, 1) 100%);
+        background: linear-gradient(0deg, var(--color-bg) 0%, rgb(97, 62, 70) 100%);
         padding: 24px 33px;
         box-shadow: 0 0 4px rgba(0,0,0,0.25);
     }
     .menuItems li:hover a {
-        color: #fbed54; 
+        color: white; 
       }
 
     .menuOpen {

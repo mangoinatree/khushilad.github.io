@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './about.module.css'
 import { getImageUrl } from '../../utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChalkboardUser } from '@fortawesome/free-solid-svg-icons'
+import { faChalkboardUser, faBook } from '@fortawesome/free-solid-svg-icons'
 
 
 const About = () => {
@@ -27,7 +27,7 @@ const About = () => {
                     </div>
                 </li>
                 <li className={styles.aboutItem}>
-                    <FontAwesomeIcon icon={faChalkboardUser} className={styles.aboutItemIcon} size="3x"></FontAwesomeIcon>
+                    <FontAwesomeIcon icon={faBook} className={styles.aboutItemIcon} size="3x"></FontAwesomeIcon>
                     <div className={styles.aboutItemText}>
                     <h3>Computing Science Student</h3>
                     <p>

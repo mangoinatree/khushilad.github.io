@@ -2,24 +2,33 @@
 
 .container {
     position: relative;
-    background-color: transparent;
     margin-top: 129px;
+    display: flex;
+    flex-direction: column;
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    background-color: #1e1e1e !important;
+    padding: 5%;
+    justify-content: center;
 }
 
 .title {
   font-size: 30px;
-  font-weight: 100;
+  font-weight: 700;
   text-decoration: none;
-  color: var(--color-text);
+  margin-left: 10px;
+  margin-top: 15px;
+  color: white;
 }
 
 .content {
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 }
 
 .aboutImage {
@@ -43,12 +52,13 @@
     padding: 25px;
     background-image: linear-gradient(
       -45deg,
-      rgba(29, 66, 161, 0.462) 0%,
+      rgb(97, 62, 70) 0%,
       rgba(255, 255, 255, 0) 100%
     );
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: 0.4s;
+    color: var(--color-bg);
 }
 .aboutItem:hover {
     background-size: 100% 100%;
@@ -75,6 +85,7 @@
       padding-left: 0;
       padding-right: 0;
       align-items: center;
+      padding: 5%;
     }
   
     .content {

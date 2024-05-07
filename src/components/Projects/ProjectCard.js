@@ -16,7 +16,7 @@ export const ProjectCard = ({
       />
       <div className={styles.overlay}>
         <a href={source} target="_blank" className={styles.icon}>
-          <FontAwesomeIcon icon={faLink} color="#4d4d4e" className={styles.sourceIcon} size="2x"></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faLink} color="white" className={styles.sourceIcon} size="2x"></FontAwesomeIcon>
         </a>
       </div>
       <h3 className={styles.title}>{title}</h3>

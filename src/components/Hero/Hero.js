@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className={styles.container}>
         <div className={`${styles.content} ${styles.fadeIn}`}>
-            <h1 className={styles.title}>Hi, I'm Khushi Lad!</h1>
+            <h1 className={styles.title}>Hi, I'm Khushi!</h1>
             <p className={styles.description}>I am a computing science student at the University of Alberta who loves to problem solve with code.</p>
         </div>
         <img
@@ -14,8 +14,7 @@ const Hero = () => {
           alt="Hero Image of me"
           className={styles.heroImg}
         />
-        <div className={styles.topBlur}/>
-        <div className={styles.bottomBlur}/>   
+           
     </section>
   )
 }

@@ -4,9 +4,10 @@
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  background: radial-gradient(circle, var(--color-secondary) 0%, transparent 100%);
+  background: var(--color-text);
   padding: 18px 24px;
   max-width: 345px;
+  color: var(--color-bg);
 }
 
 .image {
@@ -29,7 +30,9 @@
 
 .title {
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 900;
+  color: white;
+  opacity: 0.9;
 }
 
 .description {
@@ -46,13 +49,14 @@
   flex-wrap: wrap;
   gap: 6px;
   list-style: none;
+  color: rgba(255, 255, 255, 0.841);
 }
 
 .skill {
   font-size: 25px;
   font-weight: 400;
   border-radius: 10px;
-  background: var(--color-bg);
+  background: rgb(79, 51, 57);
   padding: 2px 22px;
 }
 
@@ -65,7 +69,7 @@
 
 .link {
   text-decoration: none;
-  color: var(--color-text);
+  color: rgb(54, 35, 39);
   font-size: 30px;
   font-weight: 600;
   border-radius: 100px;
