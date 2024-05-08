@@ -4,9 +4,7 @@ import { useEffect } from 'react';
 
 const Tree = () => {
     const animateCircles = () => {
-        const circles = document.querySelectorAll(`.${styles.circle}`);
-        const lines = document.querySelectorAll(`${styles.drawLine}`);
-        
+        const circles = document.querySelectorAll(`.${styles.circle}`);       
         // Convert NodeList to Array for sorting
         const circlesArray = Array.from(circles);
 
@@ -33,14 +31,8 @@ const Tree = () => {
                 }, 50); // Adjust the interval as needed
             }, index * 100); // Adjust the delay as needed
         });
-
         
-        lines.forEach(line => {
-            line.style.strokeDasharray = '0';
-            line.style.animation = 'drawLine 12s forwards'; // Reset animation state
-        });
-
-        //setTimeout(animateCircles, circlesArray.length * 150);
+        setTimeout(animateCircles, circlesArray.length * 150);
 
     }
     useEffect(() => {
