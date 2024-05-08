@@ -1,0 +1,24 @@
+.circle {
+    fill: rgb(64, 22, 40);
+    opacity: 0;
+}
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.drawLine {
+    stroke-dasharray: 0;
+    animation: drawLine 12s forwards;
+}
+
+@keyframes drawLine {
+    from { stroke-dasharray: 0; }
+    to { stroke-dasharray: 1000; }
+}
+ 
