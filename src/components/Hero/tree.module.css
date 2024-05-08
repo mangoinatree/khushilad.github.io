@@ -14,10 +14,11 @@
 
 .drawLine {
     stroke-dasharray: 0;
-    animation: drawLine 12s infinite;
+    animation: drawLine 12s infinite; /* Disable the animation initially */
 }
+
 
 @keyframes drawLine {
     from { stroke-dasharray: 0; }
-    to { stroke-dasharray: 500; } /* Set to 50% to reach the complete state at 6s */
+    to { stroke-dasharray: 500; }
 }

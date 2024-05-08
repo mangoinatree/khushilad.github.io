@@ -11,7 +11,7 @@ const About = () => {
         <h2 className={styles.title}>About</h2>
         <div className={styles.content}>
             <img 
-                src={"/assets/about/aboutImage.png"}
+                src={"/assets/about/aboutImage2.png"}
                 alt="Me sitting witha laptop"
                 className={styles.aboutImage}
             />

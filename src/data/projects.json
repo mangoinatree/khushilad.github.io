@@ -2,21 +2,21 @@
     {
       "title": "Event Horizon",
       "imageSrc": "/assets/projects/eventHorizon.png",
-      "description": "This is a project made to learn design patterns and java by building an app.",
+      "description": "An events app that allows users to see event details that are nearby on a Google Map. Has in-app QR scanning for check-ins and details. User persmissions are handled based on roles.",
       "skills": ["Java", "Firebase", "Google Cloud", "GitHub"],
       "source": "https://github.com/mangoinatree/EventHorizon"
     },
     {
       "title": "Personal Portfolio",
       "imageSrc": "/assets/projects/portfolio.png",
-      "description": "This is a project made to learn react by building a portfolio.",
+      "description": "This is a project made to showcase my skills as well as learn react, animations, and more about front-end.",
       "skills": ["React", "HTML", "CSS"],
       "source": "https://github.com/mangoinatree/my-portfolio"
     },
     {
       "title": "Tech Notes",
       "imageSrc": "/assets/projects/techNotes.png",
-      "description": "This is a project made to learn the MERN stack by building an app.",
+      "description": "This is a project made to learn the MERN stack by building a simple notes app with user login. User persmissions are handled by json-web-tokens. Redux library used for state management",
       "skills": ["React", "HTML", "CSS", "NodeJS", "Express", "Mongo", "Redux", "JWT"],
       "source": "https://github.com/mangoinatree/techNotes"
     }

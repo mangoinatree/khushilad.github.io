@@ -64,6 +64,7 @@
     background-size: 100% 100%;
 }
 .aboutItem h3 {
+    color:aliceblue;
     font-size: 25px;
     font-weight: 600;
 }
@@ -76,6 +77,7 @@
   margin: 15px;
 }
 .aboutItemIcon {
+  color: aliceblue;
   margin: 15px;
 }
   

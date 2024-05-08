@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 
 const Tree = () => {
     const animateCircles = () => {
-        const circles = document.querySelectorAll(`.${styles.circle}`);       
+        const circles = document.querySelectorAll(`.${styles.circle}`);
+        const lines = document.querySelectorAll(`.${styles.drawLine}`);       
         // Convert NodeList to Array for sorting
         const circlesArray = Array.from(circles);
 
@@ -13,6 +14,15 @@ const Tree = () => {
             const aY = parseFloat(a.querySelector('path').getAttribute('d').match(/[\d.]+/g)[1]);
             const bY = parseFloat(b.querySelector('path').getAttribute('d').match(/[\d.]+/g)[1]);
             return bY - aY; // Descending order
+        });
+
+        //restart line animation
+
+        lines.forEach(line => {
+            line.style.color = 'white';
+            line.classList.remove(`.${styles.drawLine}`);
+            void line.offsetWidth; // Trigger reflow
+            line.classList.add(`.${styles.drawLine}`);
         });
         
 
