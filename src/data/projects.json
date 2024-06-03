@@ -7,11 +7,11 @@
       "source": "https://github.com/mangoinatree/EventHorizon"
     },
     {
-      "title": "Personal Portfolio",
-      "imageSrc": "/assets/projects/portfolio.png",
-      "description": "This is a project made to showcase my skills as well as learn react, animations, and more about front-end.",
-      "skills": ["React", "HTML", "CSS"],
-      "source": "https://github.com/mangoinatree/my-portfolio"
+      "title": "Gym Buddy",
+      "imageSrc": "/assets/projects/gymBuddy.png",
+      "description": "A app that that motivates you and keeps track of your physical achievements in and out of the gym. Made to enhance my Redux toolkit skills.",
+      "skills": ["React", "HTML", "CSS", "NodeJS", "Express", "Redux", "RTK query"],
+      "source": "https://github.com/mangoinatree/gymBuddy"
     },
     {
       "title": "Tech Notes",
@@ -19,5 +19,12 @@
       "description": "This is a project made to learn the MERN stack by building a simple notes app with user login. User persmissions are handled by json-web-tokens. Redux library used for state management",
       "skills": ["React", "HTML", "CSS", "NodeJS", "Express", "Mongo", "Redux", "JWT"],
       "source": "https://github.com/mangoinatree/techNotes"
+    },
+    {
+      "title": "Personal Portfolio",
+      "imageSrc": "/assets/projects/portfolio.png",
+      "description": "This is a project made to showcase my skills as well as learn react, animations, and more about front-end.",
+      "skills": ["React", "HTML", "CSS"],
+      "source": "https://github.com/mangoinatree/my-portfolio"
     }
 ]
