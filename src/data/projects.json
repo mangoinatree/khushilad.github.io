@@ -3,22 +3,29 @@
       "title": "Event Horizon",
       "imageSrc": "/assets/projects/eventHorizon.png",
       "description": "An events app that allows users to see event details that are nearby on a Google Map. Has in-app QR scanning for check-ins and details. User persmissions are handled based on roles.",
-      "skills": ["Java", "Firebase", "Google Cloud", "GitHub"],
+      "skills": ["Java", "Firebase", "Google Cloud","Factory Design"],
       "source": "https://github.com/mangoinatree/EventHorizon"
     },
     {
       "title": "Gym Buddy",
       "imageSrc": "/assets/projects/gymBuddy.png",
       "description": "A app that that motivates you and keeps track of your physical achievements in and out of the gym. Made to enhance my Redux toolkit skills.",
-      "skills": ["React", "HTML", "CSS", "NodeJS", "Express", "Redux", "RTK query"],
+      "skills": ["React", "HTML",  "NodeJS", "Express", "Redux", "RTK query","CSS", "MongoDB", "MVC design"],
       "source": "https://github.com/mangoinatree/gymBuddy"
     },
     {
-      "title": "Tech Notes",
-      "imageSrc": "/assets/projects/techNotes.png",
-      "description": "This is a project made to learn the MERN stack by building a simple notes app with user login. User persmissions are handled by json-web-tokens. Redux library used for state management",
-      "skills": ["React", "HTML", "CSS", "NodeJS", "Express", "Mongo", "Redux", "JWT"],
-      "source": "https://github.com/mangoinatree/techNotes"
+      "title": "Spam Detector",
+      "imageSrc": "/assets/projects/spamDetector.png",
+      "description": "Spam or Ham email checker model using the Naive Bayes Algorithm",
+      "skills": ["Python",  "pandas","Google Collab", "numpy", "scikit-learn", "Streamlit"],
+      "source": "https://github.com/mangoinatree/spamDetector"
+    },
+    {
+      "title": "Data Analysis Dashboard",
+      "imageSrc": "/assets/projects/analyticsProject.png",
+      "description": "Collected industry data through WebScraping and Web APIs then cleaned and analyzed data before building a dashboard to visualize the relationships, composition and comparisons ",
+      "skills": ["Python", "Pandas","Webscraping","Data Wrangling", "SQL","Web APIs", "Google Collab", "IBM Cognos", "Numpy"],
+      "source": "https://github.com/mangoinatree/Dashboard-Stock-Revenue-Data"
     },
     {
       "title": "Personal Portfolio",

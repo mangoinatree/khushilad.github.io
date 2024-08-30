@@ -19,7 +19,7 @@ const Contact = () => {
                 </a>
             </li>
             <li className={styles.link}>
-                <a target="_blank" rel="noreferrer" href=''>
+                <a target="_blank" rel="noreferrer" href='https://github.com/mangoinatree'>
                     <FontAwesomeIcon icon={faFile} color="#4d4d4e" className="anchor-icon" size='3x'></FontAwesomeIcon>
                 </a>
             </li>
