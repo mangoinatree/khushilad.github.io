@@ -1,58 +1,118 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
-import { faFile } from '@fortawesome/free-solid-svg-icons'
 import styles from "./navbar.module.css"
 import { useState } from 'react'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemText from '@mui/material/ListItemText'
+import MenuIcon from '@mui/icons-material/Menu'
+import Box from '@mui/material/Box'
+import PersonIcon from '@mui/icons-material/Person'
+import ListIcon from '@mui/icons-material/List'
+import BuildIcon from '@mui/icons-material/Build'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import FilePresentIcon from '@mui/icons-material/FilePresent'
+import Drawer from '@mui/material/Drawer'
+import Divider from '@mui/material/Divider'
+
+
+
 
 
 const Navbar = () => {
-    const[menuOpen, setMenuOpen] = useState(false)
+    const [state, setState] = useState({
+        right: false
+    })
+
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
+
+        setState({ ...state, [anchor]: open });
+    }
+
+    const list = (anchor) => (
+        <Box
+            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+            role="presentation"
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
+        >
+            <List>
+            <ListItem disablePadding>
+                    <ListItemButton component="a" href='#about'>
+                        <ListItemIcon>
+                            <PersonIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={"About"} />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton component="a" href='#experience'>
+                        <ListItemIcon>
+                            <ListIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={"Experience"} />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton component="a" href='#projects'>
+                        <ListItemIcon>
+                            <BuildIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={"Projects"} />
+                    </ListItemButton>
+                </ListItem>
+                <Divider />
+                <ListItem disablePadding>
+                <ListItemButton component="a" href='http://www.linkedin.com/in/khushilad' target="_blank" rel="noreferrer">
+                    <ListItemIcon>
+                        <LinkedInIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="LinkedIn" />
+                </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                <ListItemButton component="a" href='https://github.com/mangoinatree' target="_blank" rel="noreferrer">
+                    <ListItemIcon>
+                        <GitHubIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="GitHub" />
+                </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+                <ListItemButton component="a" href='/assets/resume.pdf' target="_blank" rel="noreferrer">
+                    <ListItemIcon>
+                        <FilePresentIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Resume" />
+                </ListItemButton>
+            </ListItem>
+            </List>
+        </Box>
+    )
+
   return (
     <nav className={styles.navbar}>
         <a className={styles.title} href="/">MyPortfolio</a>
         <div className={styles.menu}>
-        <img
-          className={styles.menuBtn}
-          src={
-            menuOpen
-              ? "/assets/nav/closeIcon.png"
-              : "/assets/nav/menuIcon.png"
-          }
-          alt="menu-button"
-          onClick={() => setMenuOpen(!menuOpen)}
-        />
-            <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
-            onClick={() => setMenuOpen(false)}>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <ul className={styles.menuItems}>
-                        <li>
-                            <a target="_blank" rel="noreferrer" href='http://www.linkedin.com/in/khushilad'>
-                                <FontAwesomeIcon icon={faLinkedin} color="rgb(97, 62, 70)" className={styles.anchorIcon}></FontAwesomeIcon>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" rel="noreferrer" href='https://github.com/mangoinatree?ocid=AIDcmmli8vlwie_SEM__k_EAIaIQobChMI0ZimvvHvhQMVoQWtBh1_HgRcEAAYASAAEgIwn_D_BwE_k_'>
-                                <FontAwesomeIcon icon={faGithub} color="rgb(97, 62, 70)" className={styles.anchorIcon}></FontAwesomeIcon>
-                            </a>
-                        </li>
-                        <li>
-                            <a target="_blank" rel="noreferrer" href='/assets/nav/resumeklad.docx' >
-                                <FontAwesomeIcon icon={faFile} color="rgb(97, 62, 70)" className={styles.anchorIcon}></FontAwesomeIcon>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+        
+        <MenuIcon
+                onClick={
+                    toggleDrawer("right", true)
+                }
+                className={styles.menuIcon}
+            />
+        <Drawer
+                anchor={"right"}
+                open={state["right"]}
+                onClose={toggleDrawer("right", false)}
+            >
+                {list("right")}
+            </Drawer>
             
         </div>
     </nav>
