@@ -28,7 +28,7 @@ const Experience = () => {
 
     const goToNextSlide = () => {
         if (currentIndex < skills.length - slidesToShow) {
-            setCurrentIndex(currentIndex + 1);
+            setCurrentIndex(currentIndex + slidesToShow);
         } else {
             setCurrentIndex(0);
         }
@@ -38,7 +38,7 @@ const Experience = () => {
         if (currentIndex === 0) {
             setCurrentIndex(skills.length - slidesToShow);
         } else {
-            setCurrentIndex(currentIndex - 1);
+            setCurrentIndex(currentIndex - slidesToShow);
         }
     };
 
@@ -57,7 +57,6 @@ const Experience = () => {
                             <div className={styles.skillImageContainer}>
                                 <img src={skill.imageSrc} alt={skill.title} />
                             </div>
-                            <p>{skill.title}</p>
                         </div>
                     ))}
                 </div>
