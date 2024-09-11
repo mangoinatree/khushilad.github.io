@@ -1,6 +1,7 @@
 @import "../../vars.css";
 
 .container {
+    position: relative;
     color: var(--color-text);
     margin-top: 79px;
     margin-left: 10%;
@@ -8,7 +9,6 @@
     display:flex;
     flex-direction: column;
     padding: 25px;
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.3);
     
 }
 
@@ -24,7 +24,8 @@
 .content {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     margin-top: 14px;
 }
 
@@ -42,6 +43,10 @@
     gap: 11px;
 }
 
+.hidden {
+  display: none;
+}
+
 .skillImageContainer {
     background: radial-gradient(circle, rgb(97, 62, 70) 0%, transparent 90%);
     opacity: 100%;
@@ -56,26 +61,27 @@
 
 .skill p {
     font-size: 25px;
-    font-family: var(--font-roboto);
     font-weight: 400;
     color: rgb(74, 48, 54);
   }
   
-  
-  @media screen and (max-width: 830px) {
-    .content {
-      flex-direction: column;
-      align-items: center;
-      gap: 34px;
-    }
-    .container {
-      align-items: center;
-    }
-  
-    .skills {
-      width: 100%;
-      flex-direction: row;
-      justify-content: center;
-    }
- 
+  .arrow{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
   }
+
+  .arrow:hover{
+    cursor: pointer;
+  }
+
+  .arrowLeft{
+    left: 1rem;
+  }
+
+  .arrowRight{
+    right: 1rem;
+  }
+
+  
+  
