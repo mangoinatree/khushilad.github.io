@@ -58,5 +58,11 @@
     .content {
       align-items: center;
     }
+    .content h1 {
+      text-align: center;
+    }
+    .content p {
+      text-align: center;
+    }
   
   }

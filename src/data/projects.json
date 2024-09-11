@@ -9,7 +9,7 @@
     {
       "title": "Gym Buddy",
       "imageSrc": "/assets/projects/gymBuddy.png",
-      "description": "A app that that motivates you and keeps track of your physical achievements in and out of the gym. Made to enhance my Redux toolkit skills.",
+      "description": "A full stack MERN app that that motivates you and keeps track of your physical achievements in and out of the gym.",
       "skills": ["React", "HTML",  "NodeJS", "Express", "Redux", "RTK query","CSS", "MongoDB", "MVC design"],
       "source": "https://github.com/mangoinatree/gymBuddy"
     },

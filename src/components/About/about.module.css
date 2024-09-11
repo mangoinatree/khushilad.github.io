@@ -8,20 +8,9 @@
     z-index: 1;
     margin-left: 10%;
     margin-right: 10%;
-    box-shadow: 0 20px 35px rgba(0,0,0,0.3);
     border-radius: 15px;
-    background-color: #1e1e1e !important;
     padding: 5%;
     justify-content: center;
-}
-
-.title {
-  font-size: 30px;
-  font-weight: 700;
-  text-decoration: none;
-  margin-left: 10px;
-  margin-top: 15px;
-  color: white;
 }
 
 .content {
@@ -39,46 +28,52 @@
 .aboutItems {
     color: var(--color-text);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 50px;
+}
+.aboutItemText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .aboutItem {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     border-radius: 20px;
     list-style: none;
     padding: 25px;
-    background-image: linear-gradient(
-      -45deg,
-      rgb(97, 62, 70) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
     background-size: 0 100%;
-    background-repeat: no-repeat;
-    transition: 0.4s;
-    color: var(--color-bg);
 }
-.aboutItem:hover {
-    background-size: 100% 100%;
-}
+
 .aboutItem h3 {
-    color:aliceblue;
+    color: var(--color-text);
+    text-align: center;
     font-size: 25px;
     font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .aboutItem p {
     font-size: 20px;
+    color: var(--color-secondary);
+    text-align: center;
   }
 
-.aboutItemText {
+
+.aboutItemIcon {
+  color: white;
   margin: 15px;
 }
-.aboutItemIcon {
-  color: aliceblue;
-  margin: 15px;
+
+.iconDiv{
+  background: var(--color-text);
+  border-radius: 10%;
+  margin-bottom: 1rem;
 }
   
   @media screen and (max-width: 830px) {
@@ -100,6 +95,7 @@
   
     .aboutItems {
       margin-top: 29px;
+      flex-direction: column;
     }
   
     .aboutItem {

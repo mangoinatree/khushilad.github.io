@@ -13,7 +13,7 @@
 }
 
 .title {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     text-decoration: none;
     color: var(--color-text);
@@ -21,14 +21,18 @@
 
 
 .menuIcon {
-    font-size: 40px; /* Adjust the size as needed */
-    cursor: pointer; /* Add a pointer cursor for better UX */
+    font-size: 40px;
+    cursor: pointer; 
     color: var(--color-text);
     display: none;
 }
 
 .icon {
     color: var(--color-secondary);
+}
+
+.Drawer {
+    background-color: #FFFFFF;
 }
 
 
