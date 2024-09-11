@@ -8,3 +8,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: #FFFFFF;
+  font-family: "Epilogue", sans-serif;
+}
+
+a {
+  color: #FFFFFF;
+}

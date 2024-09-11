@@ -1,27 +1,72 @@
-import React from 'react'
-import styles from './experience.module.css'
-import skills from "../../data/skills.json"
+import React, { useState, useEffect } from 'react';
+import styles from './experience.module.css';
+import skills from '../../data/skills.json';
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 
 const Experience = () => {
-  return (
-    <section id="experience" className={styles.container}>
-        <h2 className={styles.title}>Experience</h2>
-        <div className={styles.content}>
-            <div className={styles.skills}>
-                {skills.map((skill, id) => {
-                    return (
-                    <div key={id} className={styles.skill}>
-                        <div className={styles.skillImageContainer}>
-                        <img src={skill.imageSrc} alt={skill.title} />
-                        </div>
-                        <p>{skill.title}</p>
-                    </div>
-                    );
-                })}
-            </div>
-        </div>
-    </section>
-  )
-}
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [slidesToShow, setSlidesToShow] = useState(1);
 
-export default Experience
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 850) {
+                setSlidesToShow(1);
+            } else {
+                setSlidesToShow(3);
+            }
+        };
+
+        // Set initial value
+        handleResize();
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup event listener
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const goToNextSlide = () => {
+        if (currentIndex < skills.length - slidesToShow) {
+            setCurrentIndex(currentIndex + slidesToShow);
+        } else {
+            setCurrentIndex(0);
+        }
+    };
+
+    const goToPrevSlide = () => {
+        if (currentIndex === 0) {
+            setCurrentIndex(skills.length - slidesToShow);
+        } else {
+            setCurrentIndex(currentIndex - slidesToShow);
+        }
+    };
+
+    const visibleSkills = skills.slice(currentIndex, currentIndex + slidesToShow);
+
+    return (
+        <section id="experience" className={styles.container}>
+            <div className={styles.content}>
+                <BsArrowLeftCircleFill
+                    className={`${styles.arrow} ${styles.arrowLeft}`}
+                    onClick={goToPrevSlide}
+                />
+                <div className={styles.carousel}>
+                    {visibleSkills.map((skill, index) => (
+                        <div key={index} className={styles.skill}>
+                            <div className={styles.skillImageContainer}>
+                                <img src={skill.imageSrc} alt={skill.title} />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <BsArrowRightCircleFill
+                    className={`${styles.arrow} ${styles.arrowRight}`}
+                    onClick={goToNextSlide}
+                />
+            </div>
+        </section>
+    );
+};
+
+export default Experience;

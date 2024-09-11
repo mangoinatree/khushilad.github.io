@@ -10,23 +10,26 @@
     z-index: 2;
     margin: 0 10%;
     padding-bottom: 10px;
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.3);
 }
 
 .title {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
-    color: rgb(97, 62, 70);
+    color: var(--color-text);
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-}
 
 .menuIcon {
     font-size: 40px; /* Adjust the size as needed */
     cursor: pointer; /* Add a pointer cursor for better UX */
+    color: var(--color-text);
+    display: none;
 }
+
+.icon {
+    color: var(--color-secondary);
+}
+
+
 

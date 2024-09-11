@@ -19,8 +19,6 @@ import Divider from '@mui/material/Divider'
 
 
 
-
-
 const Navbar = () => {
     const [state, setState] = useState({
         right: false
@@ -34,6 +32,63 @@ const Navbar = () => {
         setState({ ...state, [anchor]: open });
     }
 
+    const innerList = (<List>
+    <ListItem disablePadding>
+            <ListItemButton component="a" href='#about'>
+                <ListItemIcon >
+                    <PersonIcon className={styles.icon}/>
+                </ListItemIcon>
+                <ListItemText primary={"About"} />
+            </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+            <ListItemButton component="a" href='#experience'>
+                <ListItemIcon>
+                    <ListIcon />
+                </ListItemIcon>
+                <ListItemText primary={"Experience"} />
+            </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+            <ListItemButton component="a" href='#projects'>
+                <ListItemIcon>
+                    <BuildIcon />
+                </ListItemIcon>
+                <ListItemText primary={"Projects"} />
+            </ListItemButton>
+        </ListItem>
+        <Divider />
+        <div className={styles.contactList}>
+        <List>
+        <ListItem disablePadding>
+        <ListItemButton component="a" href='http://www.linkedin.com/in/khushilad' target="_blank" rel="noreferrer">
+            <ListItemIcon>
+                <LinkedInIcon />
+            </ListItemIcon>
+            <ListItemText primary="LinkedIn" className={styles.contactListText}/>
+        </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+        <ListItemButton component="a" href='https://github.com/mangoinatree' target="_blank" rel="noreferrer">
+            <ListItemIcon>
+                <GitHubIcon />
+            </ListItemIcon>
+            <ListItemText primary="GitHub" className={styles.contactListText}/>
+        </ListItemButton>
+    </ListItem>
+    <ListItem disablePadding>
+        <ListItemButton component="a" href='/assets/resume.pdf' target="_blank" rel="noreferrer">
+            <ListItemIcon>
+                <FilePresentIcon />
+            </ListItemIcon>
+            <ListItemText primary="Resume" className={styles.contactListText}/>
+        </ListItemButton>
+    </ListItem>
+        </List>
+        
+    </div>
+    </List>)
+
     const list = (anchor) => (
         <Box
             sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
@@ -41,57 +96,7 @@ const Navbar = () => {
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List>
-            <ListItem disablePadding>
-                    <ListItemButton component="a" href='#about'>
-                        <ListItemIcon>
-                            <PersonIcon />
-                        </ListItemIcon>
-                        <ListItemText primary={"About"} />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                    <ListItemButton component="a" href='#experience'>
-                        <ListItemIcon>
-                            <ListIcon />
-                        </ListItemIcon>
-                        <ListItemText primary={"Experience"} />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                    <ListItemButton component="a" href='#projects'>
-                        <ListItemIcon>
-                            <BuildIcon />
-                        </ListItemIcon>
-                        <ListItemText primary={"Projects"} />
-                    </ListItemButton>
-                </ListItem>
-                <Divider />
-                <ListItem disablePadding>
-                <ListItemButton component="a" href='http://www.linkedin.com/in/khushilad' target="_blank" rel="noreferrer">
-                    <ListItemIcon>
-                        <LinkedInIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="LinkedIn" />
-                </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                <ListItemButton component="a" href='https://github.com/mangoinatree' target="_blank" rel="noreferrer">
-                    <ListItemIcon>
-                        <GitHubIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="GitHub" />
-                </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-                <ListItemButton component="a" href='/assets/resume.pdf' target="_blank" rel="noreferrer">
-                    <ListItemIcon>
-                        <FilePresentIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Resume" />
-                </ListItemButton>
-            </ListItem>
-            </List>
+            {innerList}
         </Box>
     )
 
@@ -100,7 +105,7 @@ const Navbar = () => {
         <a className={styles.title} href="/">MyPortfolio</a>
         <div className={styles.menu}>
         
-        <MenuIcon
+                <MenuIcon
                 onClick={
                     toggleDrawer("right", true)
                 }
@@ -113,6 +118,10 @@ const Navbar = () => {
             >
                 {list("right")}
             </Drawer>
+            
+      
+        
+        
             
         </div>
     </nav>
