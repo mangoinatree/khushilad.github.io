@@ -1,10 +1,24 @@
 [
     {
+      "title": "Kayanou",
+      "imageSrc": "/assets/projects/kayanou.png",
+      "description": "A grant management system made for a non-profit organization to help streamline their application process by centralizing their communication, documents and tracking of relevent grants.",
+      "skills": ["MongoDB", "Express", "React","NodeJS", "Client management", "Agile Development", "Deployment"],
+      "source": "https://kayanou.onrender.com/"
+    },
+    {
       "title": "Event Horizon",
       "imageSrc": "/assets/projects/eventHorizon.png",
       "description": "An events app that allows users to see event details that are nearby on a Google Map. Has in-app QR scanning for check-ins and details. User persmissions are handled based on roles.",
       "skills": ["Java", "Firebase", "Google Cloud","Factory Design"],
       "source": "https://github.com/mangoinatree/EventHorizon"
+    },
+    {
+      "title": "Job Manager",
+      "imageSrc": "/assets/projects/jobManager.png",
+      "description": "The system enables individuals to easily monitor where they have applied, track the status of applications, customize their resumes for different positions, and keep all of their job-related information organized.",
+      "skills": ["React","TailwindCSS", "Django"],
+      "source": "https://github.com/mangoinatree/gymBuddy"
     },
     {
       "title": "Gym Buddy",
